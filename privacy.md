@@ -1,3 +1,8 @@
+---
+layout: default
+title: Privacy Policy
+description: SteadyPulse collects no information. Here is exactly what the app uses and where it stays.
+---
 # SteadyPulse Privacy Policy
 
 _Effective October 29, 2026_
@@ -23,7 +28,7 @@ Watch to:
   the pulse on your wrist. Readings are used on the watch as they arrive. The app
   keeps about the last minute of readings in memory to work out an average, and it
   does not store them anywhere.
-- **Save each session as a Mindful workout** in Apple Health, so it appears in
+- **Save each session as a Mind and Body workout** in Apple Health, so it appears in
   your Health timeline.
 
 SteadyPulse does not sell, share, or use your health data for advertising or

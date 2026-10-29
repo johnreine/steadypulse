@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:image" content="{{ '/assets/icon.png' | absolute_url }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/icon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/icon.png' | relative_url }}">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fff8f6;
+      --surface: #ffffff;
+      --text: #2a1420;
+      --muted: #6e5560;
+      --accent: #c8304d;
+      --accent-soft: #ffe4e8;
+      --border: #f0dce0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14070e;
+        --surface: #1f0e17;
+        --text: #f7e9ec;
+        --muted: #bfa3ac;
+        --accent: #ff7a8e;
+        --accent-soft: #3a1524;
+        --border: #3a1f2b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+    a { color: var(--accent); }
+    img { max-width: 100%; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+    .site-header .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; padding-top: 18px; padding-bottom: 18px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.1rem;
+    }
+    .brand img { width: 32px; height: 32px; border-radius: 8px; }
+    .site-header nav { display: flex; gap: 18px; }
+    .site-header nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
+    .site-header nav a:hover, .site-header nav a[aria-current] { color: var(--accent); }
+
+    main { padding-bottom: 48px; }
+    main h1 { font-size: 2rem; line-height: 1.2; margin: 24px 0 4px; }
+    main h2 { font-size: 1.3rem; line-height: 1.3; margin: 40px 0 8px; }
+    main h3 { font-size: 1.05rem; margin: 0 0 6px; }
+    main hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0 20px; }
+    main li { margin: 6px 0; }
+    main em { color: var(--muted); }
+
+    .hero { text-align: center; padding: 40px 0 8px; }
+    .hero-icon {
+      width: 128px; height: 128px; border-radius: 29px;
+      box-shadow: 0 12px 32px rgba(120, 20, 50, 0.28);
+    }
+    .hero h1 { font-size: clamp(2.2rem, 7vw, 3rem); margin: 20px 0 0; }
+    .tagline { font-size: 1.35rem; color: var(--muted); margin: 4px 0 16px; }
+    .lede { max-width: 560px; margin: 0 auto 20px; }
+    .badge {
+      display: inline-block; padding: 6px 14px; border-radius: 999px;
+      background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 0.9rem;
+    }
+
+    .steps { padding-left: 1.4em; }
+    .features {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px; margin-top: 16px;
+    }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px;
+    }
+    .card p { margin: 0; color: var(--muted); }
+
+    .site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; text-align: center; }
+    .site-footer .wrap { padding-top: 24px; padding-bottom: 40px; }
+    .site-footer p { margin: 4px 0; }
+    .site-footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/icon.png' | relative_url }}" alt="" width="32" height="32">
+        SteadyPulse
+      </a>
+      <nav>
+        <a href="{{ '/support.html' | relative_url }}"{% if page.url == '/support.html' %} aria-current="page"{% endif %}>Support</a>
+        <a href="{{ '/privacy.html' | relative_url }}"{% if page.url == '/privacy.html' %} aria-current="page"{% endif %}>Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+{{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>SteadyPulse is a wellness companion. It does not diagnose or treat any condition.</p>
+      <p><a href="{{ '/support.html' | relative_url }}">Support</a> · <a href="{{ '/privacy.html' | relative_url }}">Privacy Policy</a> · © {{ site.time | date: '%Y' }} John Reine</p>
+    </div>
+  </footer>
+</body>
+</html>
