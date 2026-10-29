@@ -54,6 +54,7 @@
       color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.1rem;
     }
     .brand img { width: 32px; height: 32px; border-radius: 8px; }
+    .site-header .wrap { flex-wrap: wrap; }
     .site-header nav { display: flex; gap: 18px; }
     .site-header nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
     .site-header nav a:hover, .site-header nav a[aria-current] { color: var(--accent); }
@@ -90,6 +91,76 @@
     }
     .card p { margin: 0; color: var(--muted); }
 
+    .button {
+      display: inline-block; padding: 12px 24px; border-radius: 999px;
+      background: var(--accent); color: #fff; font-weight: 700; text-decoration: none;
+    }
+
+    /* How to Use: large type and pictures for older readers */
+    .guide { font-size: 1.3rem; line-height: 1.55; }
+    .guide h1 { font-size: clamp(2.2rem, 8vw, 2.8rem); }
+    .guide h2 { font-size: clamp(1.7rem, 6vw, 2.1rem); line-height: 1.2; margin: 0 0 16px; }
+    .guide p { margin: 0 0 16px; }
+    .guide .intro { font-size: 1.4rem; }
+    .print-button {
+      font: inherit; font-size: 1.1rem; font-weight: 700; cursor: pointer;
+      padding: 10px 22px; border-radius: 999px;
+      border: 2px solid var(--accent); background: transparent; color: var(--accent);
+    }
+    .guide-box, .guide-screen {
+      background: var(--surface); border: 2px solid var(--border);
+      border-radius: 20px; padding: 24px 20px 8px; margin: 28px 0;
+    }
+    .guide-screen { border-color: var(--accent-soft); }
+    .screen-label {
+      font-weight: 800; font-size: 1.05rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .guide .screen-label { margin: 0 0 4px; }
+    .big-steps { padding-left: 1.3em; }
+    .big-steps li { margin: 0 0 16px; padding-left: 4px; }
+    .inline-icon { width: 56px; height: 56px; border-radius: 13px; vertical-align: middle; }
+    .guide figure { margin: 8px 0 20px; text-align: center; }
+    .guide figcaption { font-weight: 700; margin-top: 10px; }
+    .watch {
+      display: block; width: 100%; max-width: 300px; height: auto; margin: 0 auto;
+      background: #000; border: 12px solid #1c1c1e; border-radius: 20% / 17%;
+      box-shadow: 0 0 0 3px #8e8e93, 0 14px 32px rgba(0, 0, 0, 0.28);
+    }
+    .watch.small { max-width: 220px; }
+    .watch-pair {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 8px 24px; margin-bottom: 8px;
+    }
+    .words { list-style: none; padding: 0; margin: 0 0 16px; }
+    .words li { margin: 0 0 16px; }
+    .wtext, .wbtn {
+      display: inline-block; margin-right: 6px; padding: 0 12px; border-radius: 10px;
+      font-family: ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 800; white-space: nowrap;
+    }
+    .wtext { background: #000; color: #63dccd; }
+    .wtext.off { color: #a1a1a6; }
+    .wbtn { border-radius: 999px; padding: 0 16px; }
+    .wbtn.sym { font-size: 1.25em; line-height: 1.15; padding: 0 18px; }
+    .wbtn.mint { background: #63d3c4; color: #06302a; }
+    .wbtn.red { background: #e5483f; color: #fff; }
+    .wbtn.blue { background: #2f7cf6; color: #fff; }
+    .next { text-align: center; margin: 28px 0; }
+    .next-arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+    }
+    .next p { margin: 12px 0 0; }
+    .next strong { font-size: 1.5rem; }
+
+    @media print {
+      body { background: #fff; color: #000; }
+      .site-header nav, .print-button { display: none; }
+      .guide-box, .guide-screen, .next, .guide figure { break-inside: avoid; }
+    }
+
     .site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; text-align: center; }
     .site-footer .wrap { padding-top: 24px; padding-bottom: 40px; }
     .site-footer p { margin: 4px 0; }
@@ -104,6 +175,7 @@
         SteadyPulse
       </a>
       <nav>
+        <a href="{{ '/guide.html' | relative_url }}"{% if page.url == '/guide.html' %} aria-current="page"{% endif %}>Guide</a>
         <a href="{{ '/support.html' | relative_url }}"{% if page.url == '/support.html' %} aria-current="page"{% endif %}>Support</a>
         <a href="{{ '/privacy.html' | relative_url }}"{% if page.url == '/privacy.html' %} aria-current="page"{% endif %}>Privacy</a>
       </nav>

@@ -9,6 +9,9 @@ Need a hand? Start here. If your question isn't answered below,
 [open an issue on GitHub](https://github.com/johnreine/steadypulse/issues/new)
 (a free GitHub account is needed) and we'll get back to you.
 
+New to SteadyPulse? The [How to Use guide]({{ '/guide.html' | relative_url }}) walks
+through every screen with large pictures.
+
 ## Getting started
 
 1. **Install SteadyPulse** on your iPhone. The watch app installs with it. If it

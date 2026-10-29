@@ -1,0 +1,194 @@
+---
+layout: default
+title: How to Use
+description: A step-by-step guide to SteadyPulse on Apple Watch, with a picture of every screen.
+---
+{% assign img = '/assets/guide/' | relative_url %}
+{% capture arrow %}<svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endcapture %}
+{% capture move %}On your watch, slide your finger <strong>up</strong> the screen, or turn the round dial on the side.{% endcapture %}
+<div class="guide">
+
+<h1>How to Use SteadyPulse</h1>
+<p class="intro">SteadyPulse has six screens. They sit one below the other, like pages in a
+  stack. This guide shows each one, from the top down.</p>
+<p><button class="print-button" type="button" onclick="window.print()">Print this guide</button></p>
+
+<section class="guide-box">
+  <h2>Before you start</h2>
+  <ol class="big-steps">
+    <li><strong>Wear your watch snugly.</strong> It needs to touch your skin to read your
+      heart rate.</li>
+    <li><strong>Turn on Silent Mode.</strong> Press the long flat button below the round dial.
+      Tap the bell so it turns red. Now you will feel the taps without hearing them.</li>
+    <li><strong>Open SteadyPulse.</strong> Press the round dial to see your apps, then tap this
+      heart: <img class="inline-icon" src="{{ '/assets/icon.png' | relative_url }}" alt="SteadyPulse app icon, a coral heart" width="56" height="56"></li>
+  </ol>
+  <p>The first time, your watch asks if SteadyPulse may read your heart rate.
+    Please allow it.</p>
+</section>
+
+<section class="guide-box">
+  <h2>Moving between screens</h2>
+  <p><strong>To go down to the next screen:</strong> slide your finger <strong>up</strong>
+    the watch screen, or turn the round dial on the side.</p>
+  <p><strong>To go back up:</strong> slide your finger <strong>down</strong>, or turn the
+    dial the other way.</p>
+  <p>The little dots on the right side of the watch show which screen you are on.</p>
+  <p>If you don't touch the watch for 30 seconds, it goes back to Screen 1 by itself.</p>
+</section>
+
+<section class="guide-screen" id="screen-1">
+  <p class="screen-label">Screen 1 of 6</p>
+  <h2>Your heart rate</h2>
+  <div class="watch-pair">
+    <figure>
+      <img class="watch" src="{{ img }}1-listening.png" width="422" height="514"
+        alt="Watch screen: 72 BPM in large numbers, and Listening 0:42 in green below.">
+      <figcaption>The first minute</figcaption>
+    </figure>
+    <figure>
+      <img class="watch" src="{{ img }}1-buzz.png" width="422" height="514"
+        alt="Watch screen: 72 BPM in large numbers, and Buzz 67 in green below.">
+      <figcaption>After one minute</figcaption>
+    </figure>
+  </div>
+  <p>The big number is your <strong>heart rate</strong>: how many times your heart beats in
+    one minute. <strong>BPM</strong> means “beats per minute.”</p>
+  <p>SteadyPulse starts by itself when you open it. The words at the bottom tell you what it
+    is doing:</p>
+  <ul class="words">
+    <li><span class="wtext">Listening 0:42</span> It is listening to your heart. The clock
+      counts down one minute.</li>
+    <li><span class="wtext">Buzz 67</span> You feel gentle taps on your wrist, 67 each
+      minute. That is a little slower than your heart.</li>
+    <li><span class="wtext">Manual 60</span> Manual taps are on, 60 each minute. See Screen 3.</li>
+    <li><span class="wtext off">Buzz off</span> The taps are stopped.</li>
+  </ul>
+  <p>If your heart rate goes down, the taps slow down with it. They never speed up.</p>
+</section>
+
+<div class="next">
+  <span class="next-arrow">{{ arrow }}</span>
+  <p><strong>Next: Screen 2</strong><br>{{ move }}</p>
+</div>
+
+<section class="guide-screen" id="screen-2">
+  <p class="screen-label">Screen 2 of 6</p>
+  <h2>Start and Stop</h2>
+  <div class="watch-pair">
+    <figure>
+      <img class="watch" src="{{ img }}2-stop.png" width="422" height="514"
+        alt="Watch screen with one large red Stop button.">
+      <figcaption>While the taps are on</figcaption>
+    </figure>
+    <figure>
+      <img class="watch" src="{{ img }}2-start-manual.png" width="422" height="514"
+        alt="Watch screen with a green Start button above a blue Manual button.">
+      <figcaption>While the taps are off</figcaption>
+    </figure>
+  </div>
+  <p>While the taps are on, you see one big <span class="wbtn red">Stop</span> button.
+    Tap it to stop the taps.</p>
+  <p>While the taps are off, you see two buttons:</p>
+  <ul class="words">
+    <li><span class="wbtn mint">Start</span> Listens to your heart for one minute, then
+      starts gentle taps a little slower than your heart.</li>
+    <li><span class="wbtn blue">Manual</span> Starts taps right away, at the speed you set
+      on Screen 3.</li>
+  </ul>
+  <p>The taps keep going when you lower your arm. Come back here and tap
+    <span class="wbtn red">Stop</span> when you are done.</p>
+</section>
+
+<div class="next">
+  <span class="next-arrow">{{ arrow }}</span>
+  <p><strong>Next: Screen 3</strong><br>{{ move }}</p>
+</div>
+
+<section class="guide-screen" id="screen-3">
+  <p class="screen-label">Screen 3 of 6</p>
+  <h2>Manual BPM</h2>
+  <figure>
+    <img class="watch" src="{{ img }}3-manual-bpm.png" width="422" height="514"
+      alt="Watch screen titled Manual BPM, showing 60, with a minus button and a plus button.">
+  </figure>
+  <p>This sets the speed of <strong>Manual</strong> taps: how many taps in one minute.
+    It starts at 60, which is one tap each second.</p>
+  <p>Tap <span class="wbtn mint sym">+</span> for faster. Tap <span class="wbtn mint sym">−</span>
+    for slower.</p>
+  <p>If Manual taps are already on, the speed changes right away. If the taps are off, you
+    feel a sample tap each time you press.</p>
+</section>
+
+<div class="next">
+  <span class="next-arrow">{{ arrow }}</span>
+  <p><strong>Next: Screen 4</strong><br>{{ move }}</p>
+</div>
+
+<section class="guide-screen" id="screen-4">
+  <p class="screen-label">Screen 4 of 6</p>
+  <h2>Offset</h2>
+  <figure>
+    <img class="watch" src="{{ img }}4-offset.png" width="422" height="514"
+      alt="Watch screen titled Offset, showing 5, with a minus button and a plus button.">
+  </figure>
+  <p>This sets how much slower than your heart the taps are.</p>
+  <p>With 5, a heart rate of 72 gets 67 taps each minute. A bigger number means slower taps.</p>
+  <p>Most people can leave this at 5.</p>
+</section>
+
+<div class="next">
+  <span class="next-arrow">{{ arrow }}</span>
+  <p><strong>Next: Screen 5</strong><br>{{ move }}</p>
+</div>
+
+<section class="guide-screen" id="screen-5">
+  <p class="screen-label">Screen 5 of 6</p>
+  <h2>Minimum</h2>
+  <figure>
+    <img class="watch" src="{{ img }}5-minimum.png" width="422" height="514"
+      alt="Watch screen titled Minimum, showing 60, with a minus button and a plus button.">
+  </figure>
+  <p>This is the slowest the taps will ever go.</p>
+  <p>With 60, the taps never go slower than 60 each minute, even if your heart rate is lower.</p>
+  <p>Most people can leave this at 60.</p>
+</section>
+
+<div class="next">
+  <span class="next-arrow">{{ arrow }}</span>
+  <p><strong>Next: Screen 6</strong><br>{{ move }}</p>
+</div>
+
+<section class="guide-screen" id="screen-6">
+  <p class="screen-label">Screen 6 of 6</p>
+  <h2>Pulse</h2>
+  <figure>
+    <img class="watch" src="{{ img }}6-pulse.png" width="422" height="514"
+      alt="Watch screen titled Pulse, showing Strong triple tap, with a back arrow button and a forward arrow button.">
+  </figure>
+  <p>This sets how each tap feels.</p>
+  <p>Tap the arrows <span class="wbtn mint sym">&lt;</span> <span class="wbtn mint sym">&gt;</span> to try
+    another. There are eight to choose from, such as “Strong triple tap” and
+    “Heartbeat: firm, then light.”</p>
+  <p>If the taps are off, you feel each one as you choose it. SteadyPulse remembers your
+    choice.</p>
+</section>
+
+<section class="guide-box done">
+  <h2>That's every screen</h2>
+  <p>To get back to Screen 1, slide your finger <strong>down</strong> or turn the dial the
+    other way. Or just wait 30 seconds.</p>
+</section>
+
+<section class="guide-box">
+  <h2>If you see two dashes</h2>
+  <figure>
+    <img class="watch small" src="{{ img }}no-heart-rate.png" width="422" height="514"
+      alt="Watch screen showing two dashes instead of a heart rate, and Listening 0:56 below.">
+  </figure>
+  <p>The watch hasn't read your heart rate yet. Make sure your watch is snug on your wrist,
+    and wait a few seconds. SteadyPulse keeps listening until it reads your heart.</p>
+  <p>Still need help? Visit <a href="{{ '/support.html' | relative_url }}">Support</a>.</p>
+</section>
+
+</div>
