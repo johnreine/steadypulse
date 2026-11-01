@@ -9,7 +9,7 @@ description: A step-by-step guide to SteadyPulse on Apple Watch, with a picture 
 <div class="guide">
 
 <h1>How to Use SteadyPulse</h1>
-<p class="intro">SteadyPulse has six screens. They sit one below the other, like pages in a
+<p class="intro">SteadyPulse has seven screens. They sit one below the other, like pages in a
   stack. This guide shows each one, from the top down.</p>
 <p><button class="print-button" type="button" onclick="window.print()">Print this guide</button></p>
 
@@ -38,17 +38,17 @@ description: A step-by-step guide to SteadyPulse on Apple Watch, with a picture 
 </section>
 
 <section class="guide-screen" id="screen-1">
-  <p class="screen-label">Screen 1 of 6</p>
+  <p class="screen-label">Screen 1 of 7</p>
   <h2>Your heart rate</h2>
   <div class="watch-pair">
     <figure>
       <img class="watch" src="{{ img }}1-listening.png" width="422" height="514"
-        alt="Watch screen: 72 BPM in large numbers, and Listening 0:42 in green below.">
+        alt="Watch screen: 72 BPM in large numbers, Listening 0:42 in green below, and Average pulse: 72 under that.">
       <figcaption>The first minute</figcaption>
     </figure>
     <figure>
-      <img class="watch" src="{{ img }}1-buzz.png" width="422" height="514"
-        alt="Watch screen: 72 BPM in large numbers, and Buzz 67 in green below.">
+      <img class="watch" src="{{ img }}1-variable.png" width="422" height="514"
+        alt="Watch screen: 72 BPM in large numbers, and Variable 67 in green below.">
       <figcaption>After one minute</figcaption>
     </figure>
   </div>
@@ -58,13 +58,18 @@ description: A step-by-step guide to SteadyPulse on Apple Watch, with a picture 
     is doing:</p>
   <ul class="words">
     <li><span class="wtext">Listening 0:42</span> It is listening to your heart. The clock
-      counts down one minute.</li>
-    <li><span class="wtext">Buzz 67</span> You feel gentle taps on your wrist, 67 each
+      counts down one minute. <strong>Average pulse</strong> below it is your heart rate,
+      averaged so far.</li>
+    <li><span class="wtext">Variable 67</span> You feel gentle taps on your wrist, 67 each
       minute. That is a little slower than your heart.</li>
-    <li><span class="wtext">Manual 60</span> Manual taps are on, 60 each minute. See Screen 3.</li>
+    <li><span class="wtext">Manual 60</span> Manual taps are on, at one steady speed of 60
+      each minute. See Screen 4.</li>
+    <li><span class="wtext off">No heart rate</span> The watch can't read your heart rate, so
+      the taps have stopped. See <a href="#watch-off">Taking your watch off</a>.</li>
     <li><span class="wtext off">Buzz off</span> The taps are stopped.</li>
   </ul>
-  <p>If your heart rate goes down, the taps slow down with it. They never speed up.</p>
+  <p>In Variable, if your heart rate goes down, the taps slow down with it. They never speed
+    up.</p>
 </section>
 
 <div class="next">
@@ -73,31 +78,31 @@ description: A step-by-step guide to SteadyPulse on Apple Watch, with a picture 
 </div>
 
 <section class="guide-screen" id="screen-2">
-  <p class="screen-label">Screen 2 of 6</p>
+  <p class="screen-label">Screen 2 of 7</p>
   <h2>Start and Stop</h2>
   <div class="watch-pair">
     <figure>
       <img class="watch" src="{{ img }}2-stop.png" width="422" height="514"
-        alt="Watch screen with one large red Stop button.">
+        alt="Watch screen with one large red Stop Variable button.">
       <figcaption>While the taps are on</figcaption>
     </figure>
     <figure>
-      <img class="watch" src="{{ img }}2-start-manual.png" width="422" height="514"
-        alt="Watch screen with a green Start button above a blue Manual button.">
+      <img class="watch" src="{{ img }}2-start.png" width="422" height="514"
+        alt="Watch screen with a green Start Variable button above a blue Start Manual button.">
       <figcaption>While the taps are off</figcaption>
     </figure>
   </div>
-  <p>While the taps are on, you see one big <span class="wbtn red">Stop</span> button.
-    Tap it to stop the taps.</p>
+  <p>While the taps are on, you see one big <span class="wbtn red">Stop Variable</span> or
+    <span class="wbtn red">Stop Manual</span> button. Tap it to stop the taps.</p>
   <p>While the taps are off, you see two buttons:</p>
   <ul class="words">
-    <li><span class="wbtn mint">Start</span> Listens to your heart for one minute, then
-      starts gentle taps a little slower than your heart.</li>
-    <li><span class="wbtn blue">Manual</span> Starts taps right away, at the speed you set
-      on Screen 3.</li>
+    <li><span class="wbtn mint">Start Variable</span> Listens to your heart for one minute,
+      then starts gentle taps a little slower than your heart.</li>
+    <li><span class="wbtn blue">Start Manual</span> Starts taps right away, at one steady
+      speed you set on Screen 4.</li>
   </ul>
-  <p>The taps keep going when you lower your arm. Come back here and tap
-    <span class="wbtn red">Stop</span> when you are done.</p>
+  <p>The taps keep going when you lower your arm. Come back here and tap Stop when you are
+    done.</p>
 </section>
 
 <div class="next">
@@ -106,10 +111,30 @@ description: A step-by-step guide to SteadyPulse on Apple Watch, with a picture 
 </div>
 
 <section class="guide-screen" id="screen-3">
-  <p class="screen-label">Screen 3 of 6</p>
+  <p class="screen-label">Screen 3 of 7</p>
+  <h2>Vibration Type</h2>
+  <figure>
+    <img class="watch" src="{{ img }}3-vibration-type.png" width="422" height="514"
+      alt="Watch screen titled Vibration Type, showing Strong triple tap, with a back arrow button and a forward arrow button.">
+  </figure>
+  <p>This sets how each tap feels.</p>
+  <p>Tap the arrows <span class="wbtn mint sym">&lt;</span> <span class="wbtn mint sym">&gt;</span> to try
+    another. There are eight to choose from, such as “Strong triple tap” and
+    “Heartbeat: firm, then light.”</p>
+  <p>If the taps are off, you feel each one as you choose it. SteadyPulse remembers your
+    choice.</p>
+</section>
+
+<div class="next">
+  <span class="next-arrow">{{ arrow }}</span>
+  <p><strong>Next: Screen 4</strong><br>{{ move }}</p>
+</div>
+
+<section class="guide-screen" id="screen-4">
+  <p class="screen-label">Screen 4 of 7</p>
   <h2>Manual BPM</h2>
   <figure>
-    <img class="watch" src="{{ img }}3-manual-bpm.png" width="422" height="514"
+    <img class="watch" src="{{ img }}4-manual-bpm.png" width="422" height="514"
       alt="Watch screen titled Manual BPM, showing 60, with a minus button and a plus button.">
   </figure>
   <p>This sets the speed of <strong>Manual</strong> taps: how many taps in one minute.
@@ -122,36 +147,19 @@ description: A step-by-step guide to SteadyPulse on Apple Watch, with a picture 
 
 <div class="next">
   <span class="next-arrow">{{ arrow }}</span>
-  <p><strong>Next: Screen 4</strong><br>{{ move }}</p>
-</div>
-
-<section class="guide-screen" id="screen-4">
-  <p class="screen-label">Screen 4 of 6</p>
-  <h2>Offset</h2>
-  <figure>
-    <img class="watch" src="{{ img }}4-offset.png" width="422" height="514"
-      alt="Watch screen titled Offset, showing 5, with a minus button and a plus button.">
-  </figure>
-  <p>This sets how much slower than your heart the taps are.</p>
-  <p>With 5, a heart rate of 72 gets 67 taps each minute. A bigger number means slower taps.</p>
-  <p>Most people can leave this at 5.</p>
-</section>
-
-<div class="next">
-  <span class="next-arrow">{{ arrow }}</span>
   <p><strong>Next: Screen 5</strong><br>{{ move }}</p>
 </div>
 
 <section class="guide-screen" id="screen-5">
-  <p class="screen-label">Screen 5 of 6</p>
-  <h2>Minimum</h2>
+  <p class="screen-label">Screen 5 of 7</p>
+  <h2>Variable Offset</h2>
   <figure>
-    <img class="watch" src="{{ img }}5-minimum.png" width="422" height="514"
-      alt="Watch screen titled Minimum, showing 60, with a minus button and a plus button.">
+    <img class="watch" src="{{ img }}5-variable-offset.png" width="422" height="514"
+      alt="Watch screen titled Variable Offset, showing 5, with a minus button and a plus button.">
   </figure>
-  <p>This is the slowest the taps will ever go.</p>
-  <p>With 60, the taps never go slower than 60 each minute, even if your heart rate is lower.</p>
-  <p>Most people can leave this at 60.</p>
+  <p>This sets how much slower than your heart the Variable taps are.</p>
+  <p>With 5, a heart rate of 72 gets 67 taps each minute. A bigger number means slower taps.</p>
+  <p>Most people can leave this at 5.</p>
 </section>
 
 <div class="next">
@@ -160,18 +168,33 @@ description: A step-by-step guide to SteadyPulse on Apple Watch, with a picture 
 </div>
 
 <section class="guide-screen" id="screen-6">
-  <p class="screen-label">Screen 6 of 6</p>
-  <h2>Pulse</h2>
+  <p class="screen-label">Screen 6 of 7</p>
+  <h2>Variable Min</h2>
   <figure>
-    <img class="watch" src="{{ img }}6-pulse.png" width="422" height="514"
-      alt="Watch screen titled Pulse, showing Strong triple tap, with a back arrow button and a forward arrow button.">
+    <img class="watch" src="{{ img }}6-variable-min.png" width="422" height="514"
+      alt="Watch screen titled Variable Min, showing 60, with a minus button and a plus button.">
   </figure>
-  <p>This sets how each tap feels.</p>
-  <p>Tap the arrows <span class="wbtn mint sym">&lt;</span> <span class="wbtn mint sym">&gt;</span> to try
-    another. There are eight to choose from, such as “Strong triple tap” and
-    “Heartbeat: firm, then light.”</p>
-  <p>If the taps are off, you feel each one as you choose it. SteadyPulse remembers your
-    choice.</p>
+  <p>This is the slowest the Variable taps will ever go.</p>
+  <p>With 60, the taps never go slower than 60 each minute, even if your heart rate is lower.</p>
+  <p>Most people can leave this at 60.</p>
+</section>
+
+<div class="next">
+  <span class="next-arrow">{{ arrow }}</span>
+  <p><strong>Next: Screen 7</strong><br>{{ move }}</p>
+</div>
+
+<section class="guide-screen" id="screen-7">
+  <p class="screen-label">Screen 7 of 7</p>
+  <h2>Variable Max</h2>
+  <figure>
+    <img class="watch" src="{{ img }}7-variable-max.png" width="422" height="514"
+      alt="Watch screen titled Variable Max, showing 120, with a minus button and a plus button.">
+  </figure>
+  <p>This is the fastest the Variable taps will ever go.</p>
+  <p>With 120, the taps never go faster than 120 each minute, even if your heart rate is
+    higher.</p>
+  <p>Most people can leave this at 120.</p>
 </section>
 
 <section class="guide-box done">
@@ -180,14 +203,21 @@ description: A step-by-step guide to SteadyPulse on Apple Watch, with a picture 
     other way. Or just wait 30 seconds.</p>
 </section>
 
-<section class="guide-box">
-  <h2>If you see two dashes</h2>
+<section class="guide-box" id="watch-off">
+  <h2>Taking your watch off</h2>
   <figure>
     <img class="watch small" src="{{ img }}no-heart-rate.png" width="422" height="514"
-      alt="Watch screen showing two dashes instead of a heart rate, and Listening 0:56 below.">
+      alt="Watch screen showing two dashes instead of a heart rate, and No heart rate below.">
   </figure>
-  <p>The watch hasn't read your heart rate yet. Make sure your watch is snug on your wrist,
-    and wait a few seconds. SteadyPulse keeps listening until it reads your heart.</p>
+  <p>If you take your watch off, or it is too loose to read your heart rate, you see two
+    dashes and <strong>No heart rate</strong>. After about 30 seconds, the taps stop by
+    themselves.</p>
+  <p>Put the watch back on snugly. When it reads your heart again, SteadyPulse starts
+    listening again by itself.</p>
+  <p>If the watch stays off for more than 10 minutes, SteadyPulse turns off to save battery.
+    Open it again and it starts by itself.</p>
+  <p>Two dashes right after you open SteadyPulse just mean it hasn't read your heart rate
+    yet. Wait a few seconds.</p>
   <p>Still need help? Visit <a href="{{ '/support.html' | relative_url }}">Support</a>.</p>
 </section>
 

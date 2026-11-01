@@ -29,24 +29,26 @@ through every screen with large pictures.
 Turn the Digital Crown or swipe up and down to move between pages:
 
 - **Heart rate:** your current heart rate in large numbers. Below it you'll see
-  **Listening** with a countdown during the first minute, **Buzz** and the pulse rate
-  once it's running, **Manual** and the rate in Manual mode, or **Buzz off** when
+  **Listening** with a countdown and your **Average pulse** during the first minute,
+  **Variable** and the pulse rate once it's running, **Manual** and the rate in Manual
+  mode, **No heart rate** if the watch can't read your heart rate, or **Buzz off** when
   stopped.
-- **Start, Manual and Stop:** Start begins the pulse paced to your heart rate. Manual
-  plays a fixed rate you choose. Stop ends the session.
+- **Start and Stop:** Start Variable begins the pulse paced to your heart rate. Start
+  Manual plays a fixed rate you choose. Stop Variable or Stop Manual ends the session.
+- **Vibration Type:** the feel of each tap, such as "Strong triple tap" or "Heartbeat:
+  firm, then light". When the pulse is stopped, changing this plays a sample.
 - **Manual BPM:** the rate used in Manual mode.
-- **Offset:** how many beats per minute below your heart rate the pulse sits.
+- **Variable Offset:** how many beats per minute below your heart rate the pulse sits.
   The default is 5.
-- **Minimum:** the lowest rate the pulse will go. The default is 60.
-- **Pulse:** the feel of each tap, such as "Strong triple tap" or "Heartbeat: firm,
-  then light". When the pulse is stopped, changing this plays a sample.
+- **Variable Min:** the lowest rate the pulse will go. The default is 60.
+- **Variable Max:** the highest rate the pulse will go. The default is 120.
 
 ## How the pulse rate is set
 
-After listening for a minute, SteadyPulse sets the pulse to your average heart rate
-minus the Offset, but never below the Minimum or above 120. While it runs, if your
-average heart rate eases down, the pulse eases down with it. If your heart rate goes
-up, the pulse stays where it is.
+In Variable mode, SteadyPulse listens for a minute, then sets the pulse to your average
+heart rate minus the Variable Offset, kept between the Variable Min and Variable Max.
+While it runs, if your average heart rate eases down, the pulse eases down with it. If
+your heart rate goes up, the pulse stays where it is.
 
 ## Troubleshooting
 
@@ -65,6 +67,12 @@ Open the **Watch** app on your iPhone, scroll to **Available Apps**, and tap
 **The pulse keeps going after I lower my wrist.**
 That's expected. A session keeps running until you open SteadyPulse and tap **Stop**.
 Like a workout, a running session uses more battery than usual.
+
+**What happens when I take my watch off?**
+After about 30 seconds without a heart-rate reading, the pulse stops and the screen
+shows **No heart rate**. Put the watch back on and SteadyPulse starts listening again
+by itself. If the watch stays off for more than 10 minutes, the session ends to save
+battery; open SteadyPulse again and it starts by itself.
 
 **I see a "Mind and Body" workout in Health or Fitness.**
 SteadyPulse runs each session as a Mind and Body workout so it can read your heart
